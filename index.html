@@ -1,0 +1,186 @@
+<!DOCYTPE html>
+<html lang="ja">
+    <head>
+        <meta charaset="UTF-8">
+        <title>プログラミングで稼げるようになるまで</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body>
+        <header>
+            <h1>
+            <img src="image_prog.jpg" width="500" heigth="60" alt="プログラミングのイメージ"><br>
+                プログラミングで稼ぐまでの道のり
+                 </h1>
+        </header>
+        <main>
+            <h2>htmlとcssをまずは勉強します。</h2>
+            
+            <p class="test">htmlでは大体理解出来ました。<br>
+            しかし、「section」や「article」の明確な意味がまだわかっていません。（泣）<br>
+            まあそんなことはやっていくうちにわかってくるでしょう！</p>
+            <p><span>今はcssの勉強中です。</span><br>
+            多分外部ファイルからやる方が楽そうかな？
+            ブロック要素とインライン要素の違いは説明が下手だったけどなんとなくわかった。
+            </p>
+            
+            <input type="text">
+            <h3>メモ</h3>
+            <p>ブロック要素は下に並ぶ、インライン要素は横に並ぶ。</p>
+            
+            <p id="pp">セレクタについて<br>
+                <a href="#">idセレクタ</a>と<a href="index.html">class</a>セレクタがある。</p>
+            <dl>
+            <dt>idセレクタ-１つのページの中に一度しか出てこない</dt>
+                <dd>htmlはid</dd>
+                <dd>cssは#</dd>               
+            <dt>classセレクタ-１つのページの中に何度も出てくる</dt>
+                <dd>htmlはclass</dd>
+                <dd>cssは.</dd>
+            </dl>
+            <p>ただ、ブロック要素にcssをやるのとclassセレクタでやることの違いがよくわからなかった。</p>
+            
+            <h2>6/14 </h2>
+            <ul>
+            <li>セレクタ、cssをまとめる</li>
+                <p>htmlでclass指定したものを、cssで.~{}これで括る。
+                そして、おんなじ物があったらまとめることができる。同じタグ内にあるときは半角明ければok</p>
+             <li>特殊なセレクタについて</li>
+                <p>親要素（外側）と子要素（内側）がある<br>
+                小セレクタ　>　タグの中にある次にある子要素が変わる<br>
+                隣接セレクタ　 +　指定した次の要素が変わる<br>
+                間接セレクタ　〜　同じタグの後ろとかにあるものが変わる<br></p>
+            <li>属性セレクタ</li>
+                <P>class="~"が属性・値になる。<br>
+                    [属性名]もしくは[属性名="値"]でcssに書く
+                　　他のセレクタと同じように使うことができる。
+                   </P>
+            <li>疑似要素</li>
+                <p><a href="a">まだ訪問していないリンク(link)</a>や<a href="b">訪問済みのリンク(visited)</a>、<a href="index.html">マウスポインタ(hover)</a>が乗っているものなど様々<br>
+                :を書いた後に疑似要素書く
+             　　<br>最初の子要素(:first-child)、最後の子要素(:last-child)、唯一の子要素(:only-child)</p>
+            </ul>
+            
+            <h2>6/15</h2>
+            <ul>
+            <li>サイズの指定方法</li>
+                <p>絶対的なサイズ(in,mm,cm,pt,pc)、相対的なサイズ(ex,em,px,%)がある。<br>
+                1inch=2.54cm=25.4mm<br>
+                72pt=1inch=6pc　であり、1pc=12pt<br>
+                exは"x"の高さが１という基準、emは１文字分を基準とし、pxは画面の光る点であるドット１つ分が1px</p></ul>
+            
+            <h2>6/17</h2>
+            <ul>
+            <li>単語による指定方法</li>
+                <p>プロパティに対して決まっているもの<br>
+                    align(middle,left,right),vertical-align(middle,top,bottom),text-decoration(underline,none,...)など色々ある。<br>
+                    margin(auto)は余白を自動的に調整する。左右に指定すると、ブロック要素が中央寄せされる</p>
+                <p>cssのルールについて<br>
+                    inherit　親要素の設定を継承する。<br>
+                    ダブルコーテーションを使うときは\"文字\"          
+                </p>
+            <li>色の指定方法</li>
+                <p>特定の色を指定するもしくはRGB(10進数か16進数)<br>HSLを利用する(hsl 色相、彩度、明るさ)<br>
+                rgb()とhsl()はアルファチャンネルが使える。(透けさせる）</p>
+            <li>フォントの指定</li>
+                <p>font-family:フォント名;<br>
+                serifは明朝 sans-serifはゴシック　monospaceは全て同じ幅<br>
+                    ex)font-family:"Times New Roman",Times,serif;</p>
+             <li>文字の太さに指定</li>       
+                <p>font-weight<br>
+                言葉(normal,bold,border,lighter,inherit)、もしくは数字(100~900で１００単位)で指定する。normal=400,bold=700<br>
+                </p></ul>
+            <div>
+            <h2>6/19</h2>
+            <ul>
+             <li>文字のスタイルの指定</li>
+            <P>font-style(normal,italic,inherit),font-variant(normal,small-caps,inherit)<br>
+                font:font-style font-valiant font-weight font-size / line-height font-family　の順で書く。</P>
+             <li>行間の指定</li>
+                <P>line-height(px,em,ex,%)<br>
+                <img src="line-height.PNG" width="500" height="300" alt="line-height"></P>
+             <li>文字の配置</li>
+                <p>text-align(left,right,center,justfyーアルファベットの文章について指定)
+                <br>あくまでも文字についての指定。画像やブロックの配置には利用できない。               
+                </p>
+              <li>リストの表示方法</li>
+                <p>ulで可能<br>list-style-type(disc-円形,circle-白丸,square-塗りつぶされた四角)<br>olで可能<br>
+                decimal-数値,decimal-leading-zero-数値、zeroうめ
+                    ,lower-roman-ローマ数字小文字,lower-alpha-アルファベット小文字,etc..
+                  <br>list-style-position<br>
+                    inside-ブロックの内側,outside-ブロックの外側,inherit</p></ul>
+            </div>
+              <h2>6/22</h2>
+            <ul>
+                <li>paddingプロパティ</li>
+                <p>ボックスの内側の余白<br>
+                padding-４つに分ける、キツキツに詰まっていく感じ
+                (-top,-right,-bottom,-left)</p>
+                <li>marginプロパティ</li>
+                <p>ボックスの外側の余白、縮小する感じ<br>
+                margin(-top,-right,-bottom,-left) マイナスの値も適用できる。</p>
+                <li>display,visibilityプロパティ</li>
+                <p>display-どのように表示させるか、大体こっち <br>(-block,-inline,-inline-block,-none)<br>
+                visibility-どのように見せるか<br>
+                (-visible,-hidden)<br>
+                </p>
+            </ul>
+            <h2>6/24</h2>
+            <ul>
+            <li>boxのサイズの考え方</li>
+                <P>min-.max-は最小、最大でこのサイズは超えない。<br>
+                box-sizing　ボックスのサイズの算出方法を決める。(-content-box padding,borderを幅や高さに含めない。-border-box　~を含める。)<br>
+                overflow　文字が溢れた時の扱い<br>
+                -visible(はみ出して表示),-scroll(スクロールバーが表示),-hidden(はみ出た部分を表示しない)
+                </P>
+            <li>floatプロパティ</li>
+                <p>float -left,-right,-none<br>
+                clear -left,-right,-both</p>
+            </ul>
+            <h2>6/25</h2>
+            <ul>
+                <li>positionのプロパティー</li>
+                <p>位置を決める基準の指定(-static 配置の方法を決めない,-absolute,-relative,-fixed,)<br>
+                位置を決めるオプション(-top,-bottom,-right,-left)
+                <br>説明が下手すぎてよくわからんかった。</p>
+                <li>z-index</li>
+                <p>奥行きを指定する。手前ほど数字が大きい。重なっている順番を指定できる。</p>           
+            </ul>
+            <h2　>6/27</h2>
+            <ul>
+                <li>背景の指定の基本</li>
+                <p class=roku>background,-color,-image(url)<br>
+                    色の指定は基本16種類。or16進数(#65a384)or10進数(rgb(210,129,39)or rgba(1,1,1,.5)aは不透明度0~1の小数範囲)
+                </p>
+                <li>応用</li>
+                <p>-repeat(-no-repeat,-repeat-x,-y)<br>
+                -position(キーワード方式 center,top,bottom,left,right %:左上基準　数値:単位をつけて明確に指定する。<br>
+                -attachment　スクロールする際に、背景の表示の仕方(-fixed,-scroll,-local)</p>
+                <li>背景を操る</li>
+                <p>background-sizeの値(-contain,-cover)<br>
+                background-clip(-border-box,-padding-box,content-box)<br>
+                これは復習が必要</p>
+                <li>borderプロパティ</li>
+                <p><span class="border">-none,hidden,solid(実線),groove,ridge,inset,outset,dashed,dotted<br>
+                border-width(数値orキーワードthin/medium/thick)<br>border-color　色指定<br>上下左右指定可能</span></p>
+            </ul>
+            <h2>6/28</h2>
+            <ul>
+                <li>角丸を使う</li>
+                <p class="kadomaru">border-radius 左上から時計回りに指定(50px 20px 30px 40px)省略されたら対象の部分が同じになる。<br>
+                    半径を左右と上下に分けて措定できる。
+                </p>
+                <li>影をつける</li>
+                <p class="kage">box-shadow(-水平方向,-垂直方向,-ぼかし,-広がり,-色,-inset)
+                </p>
+            
+            </ul>
+            
+            
+            
+            
+            
+        </main>
+        <footer>
+        </footer>
+    </body>
+</html>
